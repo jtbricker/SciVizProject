@@ -9,7 +9,9 @@ descriptions = ["Pressure over time",
 "Maximum Velocity Magnitude over time",
 "Energy and Pressure Overlay",
 "Temperature, Pressure, Density and Velocity Scatterplot",
-"Density, Temperature, and Pressure Parallel Lines"]
+"Density, Temperature, and Pressure Parallel Lines",
+"Pressure and Energy Contour",
+"Velocity of High Energy Particles and Distribution of Energy"]
 
 
 function cancelFullScreen() {
@@ -54,7 +56,7 @@ window.onload = function() {
           //currentPic = imgs.length - 1; //uncomment to loop
         } else {
           currentPic--;
-          imgs[currentPic].src = imgs[currentPic].src
+          imgs[currentPic].src = imgs[currentPic].src;
         }
         imgs[currentPic].style.opacity = 1;
         document.getElementById('figcap').innerHTML="Figure " + (currentPic+1) + ": " + descriptions[currentPic];
@@ -67,11 +69,14 @@ window.onload = function() {
           //currentPic = 0; //uncomment to loop
         } else {
           currentPic++;
-          imgs[currentPic].src = imgs[currentPic].src
+          imgs[currentPic].src = imgs[currentPic].src;
         }
         imgs[currentPic].style.opacity = 1;
         document.getElementById('figcap').innerHTML="Figure " + (currentPic+1) + ": " + descriptions[currentPic];
         
+        break;
+      case 82:
+        imgs[currentPic].src = imgs[currentPic].src;
         break;
     }
   }
