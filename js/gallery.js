@@ -1,4 +1,5 @@
 descriptions = ["Pressure over time",
+"Pressure over time (Contour)",
 "Maximum Pressure over time", 
 "Temperature over time",
 "Maximum Temperature over time",
@@ -6,7 +7,10 @@ descriptions = ["Pressure over time",
 "Maximum Density over time",
 "Velocity Magnitude over time",
 "Maximum Velocity Magnitude over time",
-"END OF PRESENTATION"]
+"Energy and Pressure Overlay",
+"Temperature, Pressure, Density and Velocity Scatterplot",
+"Density, Temperature, and Pressure Parallel Lines"]
+
 
 function cancelFullScreen() {
   if (document.cancelFullScreen) {
@@ -44,6 +48,7 @@ window.onload = function() {
   document.onkeydown = function(e) {
     switch (e.keyCode) {
       case 37:
+      case 38:
         imgs[currentPic].removeAttribute('style');
         if (currentPic == 0) {
           //currentPic = imgs.length - 1; //uncomment to loop
@@ -56,6 +61,7 @@ window.onload = function() {
         
         break;
       case 39:
+      case 40:
         imgs[currentPic].removeAttribute('style');
         if (currentPic == imgs.length - 1) {
           //currentPic = 0; //uncomment to loop

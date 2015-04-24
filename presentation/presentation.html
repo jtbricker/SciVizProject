@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="stylesheets/presentation_style.css" media="screen">
+
+  <title>Scientific Visualization Final Project</title>
+
+</head>
+  <body>
+    <script src="js/gallery.js"></script>
+
+    
+    <!-- click to bring the slideshow in and out of fullscreen mode -->
+    <div id='figs' style="width:80%">
+    <figure id="container" onclick="fullScreen(this)">
+      <figure id="slideshow">
+        <img src="img/pressure.gif" alt>
+        <img src="img/pressure.png" alt>
+        <img src="img/temperature.gif" alt>
+        <img src="img/temperature.png" alt>
+        <img src="img/density.gif" alt>
+        <img src="img/density.png" alt>
+        <img src="img/velMag.gif" alt>
+        <img src="img/velMag.png" alt>
+      <figcaption id='figcap'></figcaption>
+      </figure>
+    </figure>
+  </div>
+  </body>
+</html>
